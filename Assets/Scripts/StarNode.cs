@@ -51,6 +51,6 @@ public class StarNode : MonoBehaviour
 
     public void SetDrawable(bool canDraw){
         drawable = canDraw;
-        sr.color = drawable ? drawableColor : sr.color;
+        sr.color = drawable ? drawableColor : initialColor;
     }
 }
