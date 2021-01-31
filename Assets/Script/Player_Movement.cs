@@ -19,14 +19,6 @@ public class Player_Movement : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        /*
-        for (int i = 0; i < board.GetLength(0); i++) {
-            for (int j = 0; j < board.GetLength(1); j++) {
-                print(board[i, j]);
-            }
-        }
-        */
-
         actions = A_Star(new Vector2(2, 2), new Vector2(0, 0));
 
         foreach (int action in actions) {
