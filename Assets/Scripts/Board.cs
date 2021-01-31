@@ -13,7 +13,7 @@ public class Board : MonoBehaviour
     {
         board = new string[size.y, size.x];
 
-        GameObject player = GameObject.FindGameObjectsWithTag("Player")[0];
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
         (int, int) playerCord = transform2boardCord(player.transform.position);
         board[playerCord.Item1, playerCord.Item2] = "P";
 

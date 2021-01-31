@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Player_Movement : MonoBehaviour {
 
-    public GameObject player;
+    private GameObject player;
 
     public Button start_button;
 
@@ -17,6 +17,8 @@ public class Player_Movement : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+
+        player = GameObject.FindGameObjectWithTag("Player");
 
         board = GetComponent<Board>();
         start_button.onClick.AddListener(startButtonClick);
@@ -33,9 +35,11 @@ public class Player_Movement : MonoBehaviour {
 
         actions = A_Star(new Vector2(start.Item2, start.Item1), new Vector2(relicCord.Item2, relicCord.Item1));
 
+        /*
         foreach (int action in actions) {
             print(num2string(action));
         }
+        */
     }
 
 
