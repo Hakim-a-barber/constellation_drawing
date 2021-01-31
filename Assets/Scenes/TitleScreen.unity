@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7622f72e7b6337e438aa15aca5ca1396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: Level1.unity
+  nextSceneName: Level1
   starSound: {fileID: 0}
   relicSound: {fileID: 0}
 --- !u!4 &141288367

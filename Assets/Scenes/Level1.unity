@@ -225,6 +225,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5035246629557400829, guid: 8fe82a025188df240957aaf4a7640acd, type: 3}
   m_PrefabInstance: {fileID: 100335710}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &100335712 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5035246629557400818, guid: 8fe82a025188df240957aaf4a7640acd, type: 3}
+  m_PrefabInstance: {fileID: 100335710}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &121698528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1018,7 +1029,7 @@ PrefabInstance:
     - target: {fileID: 3203446114840120256, guid: 6d50835e277fcb64684dee44cb037bd1, type: 3}
       propertyPath: start_button
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100335712}
     - target: {fileID: 3203446114840120258, guid: 6d50835e277fcb64684dee44cb037bd1, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -1073,7 +1084,7 @@ PrefabInstance:
       objectReference: {fileID: 579918879}
     - target: {fileID: 3203446114840120270, guid: 6d50835e277fcb64684dee44cb037bd1, type: 3}
       propertyPath: nextSceneName
-      value: level2
+      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 3203446114840120271, guid: 6d50835e277fcb64684dee44cb037bd1, type: 3}
       propertyPath: size.x
