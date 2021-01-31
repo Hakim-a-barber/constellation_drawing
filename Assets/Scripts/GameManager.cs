@@ -32,10 +32,15 @@ public class GameManager : MonoBehaviour
     }
 
     public void LoadNextScene(){
+        Debug.Log("hhh");
         if(nextSceneName == ""){
             Debug.Log("No scene set");
             return;
         }
+        //unsubscribe to the events before switching scenes
+        RelicCollection.OnRelicCollected -= PlayRelicSound;
+        RelicCollection.OnAllRelicsCollected -= LoadNextScene;
+        StarManager.OnStarConnection -= PlayStarSound;
         SceneManager.LoadScene(nextSceneName);
     }
     void PlayRelicSound(){
