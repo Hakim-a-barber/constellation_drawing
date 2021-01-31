@@ -35,10 +35,6 @@ public class Board : MonoBehaviour
             (int, int) relicCord = transform2boardCord(relic.transform.position);
             board[relicCord.Item1, relicCord.Item2] = "R";
         }
-
-        // drawConnection(new Vector3(0, 0, 0), new Vector3(3, 0, 0));
-        // print("");
-        // drawConnection(new Vector3(0, 0, 0), new Vector3(3, 0, 0));
     }
 
     public void drawConnection(Vector3 A, Vector3 B) {
@@ -86,7 +82,7 @@ public class Board : MonoBehaviour
         }
 
         for( int i = 0; i < yValues.Count; i++) {
-            print("y: " + yValues[i] + " x: " + xValues[i]);
+            // print("y: " + yValues[i] + " x: " + xValues[i]);
 
             int y = (int) Mathf.Round(yValues[i]);
             int x = (int) Mathf.Round(xValues[i]);

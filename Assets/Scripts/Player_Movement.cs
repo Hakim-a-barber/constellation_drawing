@@ -30,16 +30,12 @@ public class Player_Movement : MonoBehaviour {
 
         (int, int) start = board.transform2boardCord(player.transform.position);
 
-        GameObject relic = GameObject.FindGameObjectsWithTag("Relic")[0];
-        (int, int) relicCord = board.transform2boardCord(relic.transform.position);
+        GameObject relic = GameObject.FindGameObjectWithTag("Relic");
+        if (relic) {
+            (int, int) relicCord = board.transform2boardCord(relic.transform.position);
 
-        actions = A_Star(new Vector2(start.Item2, start.Item1), new Vector2(relicCord.Item2, relicCord.Item1));
-
-        /*
-        foreach (int action in actions) {
-            print(num2string(action));
+            actions = A_Star(new Vector2(start.Item2, start.Item1), new Vector2(relicCord.Item2, relicCord.Item1));
         }
-        */
     }
 
 
@@ -84,7 +80,7 @@ public class Player_Movement : MonoBehaviour {
                 return (List<int>) actionTable[tile];
             }
 
-            List<int> choices = new List<int> { 0, 1, 2, 3 };
+            List<int> choices = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7 };
             foreach (int direction in choices) {
 
                 // New tile have the possible move
@@ -124,7 +120,7 @@ public class Player_Movement : MonoBehaviour {
             return false;
         }
 
-        return board.getBoard()[y, x] != "X" && board.getBoard()[y, x] != "S" && board.getBoard()[y, x] != "O";
+        return board.getBoard()[y, x] == "X" || board.getBoard()[y, x] == "S" || board.getBoard()[y, x] == "R";
     }
 
     // Returns a Vector2 assosiated with the action
@@ -138,23 +134,16 @@ public class Player_Movement : MonoBehaviour {
                 return new Vector2(0, 1);
             case 3:
                 return new Vector2(-1, 0);
+            case 4:
+                return new Vector2(1, -1);
+            case 5:
+                return new Vector2(1, 1);
+            case 6:
+                return new Vector2(-1, -1);
+            case 7:
+                return new Vector2(-1, 1);
             default:    // should never happen
                 return new Vector2(0, 0);
-        }
-    }
-
-    public string num2string(int n) {
-        switch (n) {
-            case 0:
-                return "Up";
-            case 1:
-                return "Right";
-            case 2:
-                return "Down";
-            case 3:
-                return "Left";
-            default:    // should never happen
-                return "None";
         }
     }
 }
