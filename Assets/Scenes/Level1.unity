@@ -1071,6 +1071,10 @@ PrefabInstance:
       propertyPath: rootStar
       value: 
       objectReference: {fileID: 579918879}
+    - target: {fileID: 3203446114840120270, guid: 6d50835e277fcb64684dee44cb037bd1, type: 3}
+      propertyPath: nextSceneName
+      value: level2
+      objectReference: {fileID: 0}
     - target: {fileID: 3203446114840120271, guid: 6d50835e277fcb64684dee44cb037bd1, type: 3}
       propertyPath: size.x
       value: 20
