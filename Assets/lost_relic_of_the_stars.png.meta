@@ -1,7 +1,28 @@
 fileFormatVersion: 2
-guid: 28da40707dca9a04ea80d74610f9eaa4
+guid: 67352d0755343844faad867c01eed20c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3632103069433729591
+    second: lost_relic_of_the_stars_0
+  - first:
+      213: -7583851821003350275
+    second: lost_relic_of_the_stars_1
+  - first:
+      213: 2523947099081785011
+    second: lost_relic_of_the_stars_2
+  - first:
+      213: -3056811723657186564
+    second: lost_relic_of_the_stars_3
+  - first:
+      213: 8467178445858161512
+    second: lost_relic_of_the_stars_4
+  - first:
+      213: 7928286783193593291
+    second: lost_relic_of_the_stars_5
+  - first:
+      213: -448609530929475413
+    second: lost_relic_of_the_stars_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +62,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +94,168 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: lost_relic_of_the_stars_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 904
+        width: 446
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cdebc6808d289dc0800000000000000
+      internalID: -3632103069433729591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost_relic_of_the_stars_1
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 904
+        width: 446
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe55e323feb0c690800000000000000
+      internalID: -7583851821003350275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost_relic_of_the_stars_2
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 904
+        width: 446
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3beb5a0a38cd60320800000000000000
+      internalID: 2523947099081785011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost_relic_of_the_stars_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 454
+        width: 446
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2f92adee50495d0800000000000000
+      internalID: -3056811723657186564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost_relic_of_the_stars_4
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 454
+        width: 446
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863483b7fe5718570800000000000000
+      internalID: 8467178445858161512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost_relic_of_the_stars_5
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 454
+        width: 446
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5bdadc2dee60e60800000000000000
+      internalID: 7928286783193593291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost_relic_of_the_stars_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4
+        width: 446
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0181a220836c9f0800000000000000
+      internalID: -448609530929475413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
