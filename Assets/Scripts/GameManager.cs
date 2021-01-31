@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] AudioSource starSound = null;
     [SerializeField] AudioSource relicSound = null;
+
+    AudioSource mainMusic;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,11 @@ public class GameManager : MonoBehaviour
         RelicCollection.OnRelicCollected += PlayRelicSound;
         RelicCollection.OnAllRelicsCollected += LoadNextScene;
         StarManager.OnStarConnection += PlayStarSound;
+        mainMusic = GetComponent<AudioSource>();
+        if(mainMusic != null){
+            mainMusic.loop = true;
+            mainMusic.Play();
+        }
     }
 
     // Update is called once per frame
