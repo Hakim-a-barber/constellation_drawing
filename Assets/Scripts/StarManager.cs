@@ -17,10 +17,14 @@ public class StarManager : MonoBehaviour
 
     LineRenderer lineRenderer = null;
 
+    private Board board;
+
     void Start()
     {
         cam = Camera.main;
         rootStar.SetDrawable(true);
+
+        board = GetComponent<Board>();
     }
 
     public void AddStar(StarNode star){
@@ -82,6 +86,9 @@ public class StarManager : MonoBehaviour
                 BuildConnection(starA, newConnection);
                 newConnection.SetDrawable(true);
                 lineRendererObjects.Add(lineRenderer.gameObject);
+
+                board.drawConnection(starA.transform.position, newConnection.transform.position);
+
             }
             else{
                 Destroy(lineRenderer.gameObject);
