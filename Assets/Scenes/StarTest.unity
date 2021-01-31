@@ -274,7 +274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3365118310418176656, guid: e1ae2b4595be264448b0ba68a4065a3f, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3365118310418176656, guid: e1ae2b4595be264448b0ba68a4065a3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -469,7 +469,7 @@ RectTransform:
   m_Children:
   - {fileID: 944486764}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -751,7 +751,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1715404323
 GameObject:
@@ -763,6 +763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1715404325}
   - component: {fileID: 1715404324}
+  - component: {fileID: 1715404326}
   m_Layer: 0
   m_Name: StarManager
   m_TagString: Untagged
@@ -799,6 +800,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1715404326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715404323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 265f6cbe287844440896f1681184f1e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: {x: 15, y: 15}
 --- !u!1001 &6765907012292801967
 PrefabInstance:
   m_ObjectHideFlags: 0
