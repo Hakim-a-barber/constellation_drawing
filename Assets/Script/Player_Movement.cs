@@ -120,7 +120,7 @@ public class Player_Movement : MonoBehaviour {
             return false;
         }
 
-        return board.getBoard()[y, x] != "X" && board.getBoard()[y, x] != "S";
+        return board.getBoard()[y, x] != "X" && board.getBoard()[y, x] != "S" && board.getBoard()[y, x] != "O";
     }
 
     // Returns a Vector2 assosiated with the action

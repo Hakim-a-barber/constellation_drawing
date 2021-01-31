@@ -24,6 +24,12 @@ public class Board : MonoBehaviour
             board[starCord.Item1, starCord.Item2] = "S";
         }
 
+        GameObject[] obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
+        foreach (GameObject obstacle in obstacles) {
+            (int, int) obstacleCord = transform2boardCord(obstacle.transform.position);
+            board[obstacleCord.Item1, obstacleCord.Item2] = "O";
+        }
+
         GameObject[] relics = GameObject.FindGameObjectsWithTag("Relic");
         foreach (GameObject relic in relics) {
             (int, int) relicCord = transform2boardCord(relic.transform.position);
