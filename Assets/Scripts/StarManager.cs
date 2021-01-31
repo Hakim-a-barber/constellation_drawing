@@ -17,6 +17,8 @@ public class StarManager : MonoBehaviour
 
     LineRenderer lineRenderer = null;
 
+    public static event Notify OnStarConnection; 
+
     void Start()
     {
         cam = Camera.main;
@@ -82,6 +84,7 @@ public class StarManager : MonoBehaviour
                 BuildConnection(starA, newConnection);
                 newConnection.SetDrawable(true);
                 lineRendererObjects.Add(lineRenderer.gameObject);
+                OnStarConnection?.Invoke();
             }
             else{
                 Destroy(lineRenderer.gameObject);
