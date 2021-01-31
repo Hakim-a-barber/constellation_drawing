@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+public delegate void CheckBounds(Bounds bounds, StarManager manager);
 public class StarManager : MonoBehaviour
 {
     [SerializeField] StarNode rootStar = null;
@@ -17,9 +17,7 @@ public class StarManager : MonoBehaviour
 
     LineRenderer lineRenderer = null;
 
-
     private Board board;
-
 
     void Start()
     {
@@ -70,6 +68,13 @@ public class StarManager : MonoBehaviour
             }
             else{
                 lineRenderer.SetPosition(1, drawPos); 
+            }
+            RaycastHit2D[] hits = Physics2D.RaycastAll(lineRenderer.GetPosition(0), lineRenderer.GetPosition(1) - lineRenderer.GetPosition(0), Vector3.Distance(lineRenderer.GetPosition(0), lineRenderer.GetPosition(1)));
+            foreach(RaycastHit2D linehit in hits){
+                if(linehit.collider.gameObject.tag == "Obstacle"){
+                    InterruptConnection();
+                    yield break;
+                }
             }
             yield return null;
         }
