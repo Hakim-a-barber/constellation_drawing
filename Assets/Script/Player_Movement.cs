@@ -1,25 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Movement : MonoBehaviour {
 
     public GameObject player;
 
-    private string[,] board = new string[5,5] {{ "R", "X", " ", " ", " "},
-                                               { " ", "X", " ", "X", " "},
-                                               { " ", "X", "P", "X", " "},
-                                               { " ", "X", "X", "X", " "},
-                                               { " ", " ", " ", " ", " "}};
+    public Button start_button;
 
+    private Board board;
 
-    private List<int> actions;
+    private List<int> actions = new List<int>();
 
     private int counter = 0;
 
     // Start is called before the first frame update
     void Start() {
-        actions = A_Star(new Vector2(2, 2), new Vector2(0, 0));
+
+        board = GetComponent<Board>();
+        start_button.onClick.AddListener(startButtonClick);
+
+    }
+
+    void startButtonClick() {
+        Debug.Log("You have clicked the button!");
+
+        (int, int) start = board.transform2boardCord(player.transform.position);
+
+        GameObject relic = GameObject.FindGameObjectsWithTag("Relic")[0];
+        (int, int) relicCord = board.transform2boardCord(relic.transform.position);
+
+        actions = A_Star(new Vector2(start.Item2, start.Item1), new Vector2(relicCord.Item2, relicCord.Item1));
 
         foreach (int action in actions) {
             print(num2string(action));
@@ -36,7 +48,7 @@ public class Player_Movement : MonoBehaviour {
             if (counter % 50 == 0) {
                 counter = 0;
                 Vector2 action = num2vec2(actions[0]);
-                player.transform.position += new Vector3(action.x, -1*action.y, 0);
+                player.transform.position += new Vector3(action.x, action.y, 0);
                 actions.RemoveAt(0);
             }
         }
@@ -94,7 +106,7 @@ public class Player_Movement : MonoBehaviour {
                 queue.Enqueue(new_tile);
             }
         }
-
+        Debug.Log("There is no valid path");
         return new List<int>();
     }
 
@@ -104,11 +116,11 @@ public class Player_Movement : MonoBehaviour {
         int x = (int) Mathf.Round(pos.x);
         int y = (int) Mathf.Round(pos.y);
 
-        if (x < 0 || x >= board.GetLength(1) || y < 0 || y >= board.GetLength(0)) {
+        if (x < 0 || x >= board.getBoard().GetLength(1) || y < 0 || y >= board.getBoard().GetLength(0)) {
             return false;
         }
 
-        return board[y, x] != "X";
+        return board.getBoard()[y, x] != "X" && board.getBoard()[y, x] != "S";
     }
 
     // Returns a Vector2 assosiated with the action

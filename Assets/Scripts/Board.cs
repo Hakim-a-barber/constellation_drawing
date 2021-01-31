@@ -109,7 +109,7 @@ public class Board : MonoBehaviour
     }
 
 
-    private (int, int) transform2boardCord(Vector3 pos) {
+    public (int, int) transform2boardCord(Vector3 pos) {
         int x = (int) (Mathf.Round(pos.x) + (size.x / 2));
         int y = (int) (Mathf.Round(pos.y) + (size.y / 2));
 
